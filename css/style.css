@@ -152,9 +152,9 @@ main .top-bar {
     justify-content: flex-end;
     align-items: center;
     background: #080B12;
-    /* debug */
-    width: 100%;
     height: 90px;
+    /* debug */
+    /* width: 100%; */
 }
 
 .top-bar a {
@@ -173,7 +173,7 @@ main .content {
     background: #141921;
     /* debug */
     width: 100%;
-    height: calc(100% - 80px);
+    height: calc(100vh - 180px);
 }
 
 .content nav ul {
@@ -182,27 +182,36 @@ main .content {
     padding: 20px;
     margin: 0 auto;
     width: 50%; 
-    font-weight: 600;
+}
+
+.content nav ul li a {
     color: #717171;
+    font-weight: 600;
 }
 /* brani */
 .content h2 {
     color: white;
-    margin: 35px;
+    margin: 15px 25px;
     font-size: 30px;
     font-weight: 700;
+}
+
+.content p {
+    color: #717171;
+    font-weight: 700;
+    margin: 10px 25px;
 }
 
 .content .track {
     display: flex;
     justify-content: flex-start;
-    margin: 25px;
-    height: 40%;
+    flex-wrap: wrap;
+    margin: 20px 25px;
+    height: 55%;
 }
 
 /* thumbnail */
 .track .box {
-    display: flex;
     flex-direction: column;
     width: 14%;
     text-align: center;
@@ -223,8 +232,9 @@ main .content {
     font-size: 15px;
 }
 
-
-
+.track:nth-last-of-type(1) .box a img {
+    border-radius: 50%;
+}
 
 
 
@@ -236,4 +246,11 @@ footer {
     background: orange;
     width: 100%;
     height: 90px;
+    z-index: 300;
+}
+
+footer::after {
+    content: '';
+    display: table;
+    clear: both;
 }
