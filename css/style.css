@@ -249,18 +249,11 @@ main .content {
 footer {
     display: flex;
     justify-content: space-between;
-    /* debug */
-    /* float: left; */
-    background: orange;
+    background: #282828;
     width: 100%;
     height: 110px;
 }
 
-/* footer::after {
-    content: '';
-    display: table;
-    clear: both;
-} */
 
 /* album */
 footer #album {
@@ -298,48 +291,74 @@ footer #album {
     color: #717171;
 }
 
+
 /* barra */
 footer #player {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    /* debug */
-    background:rgba(0, 0, 255, 0.5);
-    width: 30%;
+    width: 35%;
 }
 
 #player #player-button ul {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 10px;
-    justify-content: space-evenly;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 #player #player-button ul li a {
-    /* margin-left: 20px; */
+    margin-left: 20px;
     color: white;
 }
 
 #player #player-button ul li:nth-child(3) {
-    font-size: 40px;
-    /* margin: 0 15px; */
+    font-size: 38px;
+    margin: 0 15px;
 }
 
 /* barra di progressione */
 #player #progress-bar {
     display: flex;
-    /* debug */
-    background: red;
-    width: calc(100% - 5px);
-    height: 7px;
+    line-height: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+}
+
+#player #progress-bar a {
+    background: #717171;
+    width: calc(100% - 60px);
+    height: 6px;
     border-radius: 15px;
+    margin: 5px 30px;
 }
 
 
 /* tools */
 footer #tools {
-    /* debug */
-    background: rgba(255, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
     width: 15%;
+}
+
+#tools ul {
+    display: flex;
+    align-items: center;
+}
+
+#tools ul li a {
+    color: white;
+    margin-right: 20px;
+}
+
+/* barra volume */
+#tools #volume-bar {
+    align-self: center;
+    background: #717171;
+    width: calc(100% - 140px);
+    height: 6px;
+    border-radius: 15px;
 }
