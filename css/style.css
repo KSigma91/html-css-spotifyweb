@@ -23,7 +23,6 @@ a {
 /* header */
 header {
     background: #000;
-    /* debug */
     float: left;
     width: 240px;
     height: calc(100vh - 90px);
@@ -42,10 +41,6 @@ header .col {
     padding: 20px;
 }
 
-/* hover header */
-header .col ul li:hover {
-    color: white;
-}
 
 /* logo */
 .col img {
@@ -155,6 +150,27 @@ header .col ul li:hover {
 }
 
 
+/* hover header */
+.col ul li a:hover {
+    /* debug */
+    color: red;
+}
+
+.col .playlist #add:hover {
+    /* debug */
+    color: red;
+}
+
+.col .account a:hover {
+    /* debug */
+    color: red;
+}
+
+.col .playlist ul li a:hover {
+    text-emphasis-color: white;
+}
+
+
 
 /* main */
 main {
@@ -172,6 +188,7 @@ main::after {
     display: table;
     clear: both;
 }
+
 
 /* barra */
 main .top-bar {
@@ -202,7 +219,7 @@ main .content {
     padding-top: 90px;
     /* debug */
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .content nav ul {
@@ -217,6 +234,13 @@ main .content {
     color: #717171;
     font-size: 13px;
     font-weight: 700;
+}
+
+.content nav ul li span {
+    display: flex;
+    margin: 2px 30px;
+    border: 1px solid #ADFD2F;
+    width: 30px;
 }
 
 /* brani */
@@ -243,15 +267,16 @@ main .content {
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 15px 20px;
-    height: 42%;
+    height: 38%;
 }
 
-.content .track:nth-last-of-type(2) {
-    height: 32%;
-}
+/* .content .track:nth-last-of-type(2) {
+    height: 29%;
+} */
 
 /* thumbnail */
 .track .box {
+    position: relative;
     flex-direction: column;
     width: 11%;
     text-align: center;
@@ -259,6 +284,11 @@ main .content {
     font-weight: 700;
     margin-top: 15px;
     margin-right: 15px;
+}
+
+.track .box a i {
+    font-size: 60px;
+    display: none;
 }
 
 .track .box > h3 {
@@ -275,6 +305,31 @@ main .content {
 
 .track:nth-last-of-type(1) .box a img {
     border-radius: 50%;
+}
+
+
+/* hover main */
+.top-bar a:hover {
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+}
+
+.content nav ul li a:hover {
+    color: white;
+}
+
+.track .box a img:hover {
+    filter: opacity(60%);
+}
+/* momentaneo */
+.track .box a:hover i {
+    /* debug */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    display: block;
+    color: white;
 }
 
 
@@ -295,7 +350,7 @@ footer #album {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 15%;
+    width: 280px;
 }
 
 #album img {
@@ -362,18 +417,39 @@ footer #player {
 /* barra di progressione */
 #player #progress-bar {
     display: flex;
-    line-height: 14px;
+    line-height: 12px;
     font-size: 10px;
     font-weight: 600;
     color: white;
 }
 
 #player #progress-bar a {
-    background: #717171;
-    width: calc(100% - 60px);
+    /* display: flex; */
+    background: #5A5A5A;
+    width: 64%;
     height: 4px;
-    border-radius: 15px;
-    margin: 5px 30px;
+    border-radius: 0 5px 5px 0;
+    margin: 4px 0;
+    margin-right: 30px;
+}
+
+#player #progress-bar .buffer {
+    display: flex;
+    background: #C1C1C1;
+    border-radius: 5px 2px 2px 5px;
+    width: 16%;
+    margin: 4px 0;
+    margin-left: 30px;
+}
+
+#progress-bar .buffer > span {
+    display: none;
+    align-self: center;
+    background: white;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin-left: 73px;
 }
 
 
@@ -383,7 +459,7 @@ footer #tools {
     flex-direction: row;
     justify-content: flex-end;  
     margin-right: 10px;
-    width: 15%;
+    width: 220px;
 }
 
 #tools ul {
@@ -393,15 +469,70 @@ footer #tools {
 
 #tools ul li a {
     color: white;
-    margin-right: 20px;
+    margin-right: 18px;
     font-size: 13px;
 }
 
 /* barra volume */
 #tools #volume-bar {
     align-self: center;
-    background: #717171;
-    width: calc(100% - 170px);
+    background: #5A5A5A;
+    width: 90px;
     height: 4px;
-    border-radius: 15px;
+    border-radius: 0 5px 5px 0;
+}
+
+#tools .buffer {
+    display: flex;
+    align-self: center;
+    background: #C1C1C1;
+    border-radius: 5px 2px 2px 5px;
+    width: 25px;
+    height: 4px;
+    margin: 4px 0;
+}
+
+#tools .buffer > span {
+    display: none;
+    align-self: center;
+    background: white;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+
+
+/* hover footer */
+
+/* album e comandi player */
+#album ul li:nth-child(2) > :hover {
+    text-decoration: underline;
+}
+
+#album a .far:hover {
+    color: white;
+}
+
+#player-button ul li a:hover .fa-play-circle {
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+}
+
+/* barra di progressione */
+#player #progress-bar .buffer:hover {
+    background: #ADFD2F;
+}
+
+#progress-bar .buffer:hover span {
+    display: block;
+}
+
+/* barra volume */
+#tools .buffer:hover {
+    background: #ADFD2F;
+}
+
+#tools .buffer:hover span {
+    display: block;
 }
