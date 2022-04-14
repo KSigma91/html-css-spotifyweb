@@ -22,12 +22,13 @@ a {
 
 /* header */
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: #000;
     float: left;
     width: 240px;
     height: calc(100vh - 90px);
-    display: flex;
-    flex-direction: column;
     font-weight: 600;
 }
 
@@ -38,23 +39,30 @@ header::after {
 }
 
 header .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 90px);
+    width: auto;
+}
+
+header .col .top {
     padding: 20px;
 }
 
-
 /* logo */
-.col img {
+.col .top img {
     width: 130px;
     margin-bottom: 10px;
 }
 
 /* icone */
-.col ul li {
+.col .top ul li {
     display: flex;
     flex-direction: row;
 }
 
-.col ul li a {
+.col .top ul li a {
     display: flex;
     height: 40px;
     line-height: 50px;
@@ -62,7 +70,7 @@ header .col {
     font-size: 14px;
  }
 
-.col ul li a img {
+.col .top ul li a img {
     width: 25px;
     height: 50px;
     margin-right: 5px;
@@ -70,83 +78,79 @@ header .col {
 }
 
 /* playlist */
-.col .playlist {
-    display: flex;
-    flex-direction: column;
-}
-
-.col .playlist h3 {
-    margin-top: 20px;
+.top .playlist h3 {
+    margin-top: 10px;
     color: white;
     font-size: 14px;
 }
 
-.col .playlist a i {
+.top .playlist #add {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #717171;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.top .playlist #add i {
     font-size: 45px;
     color: #A3A3A3;
     margin-top: 5px;
     margin-right: 10px;
 }
 
-.col .playlist #add {
-    margin-top: 5px;
-    font-size: 16px;
-}
-
-.col .playlist a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #717171;
-}
 
 /* slot */
-.playlist ul {
+.top .playlist ul {
     margin-top: 10px;
     /* overflow-y: auto; */
 }
 
 /* account e download */
-.col .account {
+.col .bottom {
     display: flex;
     flex-direction: column;
-    margin-top: 195px;
+    align-items: stretch;
+    padding: 7px 20px;
 }
 
-.col .account a {
+.col .bottom a {
+    display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     font-size: 13px;
     font-weight: 700; 
+    color: #717171;
 }
 
-.col .account a:first-child {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #717171;
+.col .bottom > span {
+    border-bottom: 1px solid grey;
+    margin: 8px 0;
+    width: 200px;
+    height: 3px;
 }
 
-.account a img {
+.bottom a img {
     width: auto;
     height: 15px;
-    margin: 1px 10px;  
+    margin-right: 10px;  
 }
 
-.col .account a:nth-child(2) {
-    margin-top: 14px;
+.col .bottom a:nth-child(3) {
+    margin-top: 5px;
     font-weight: 800;
     font-size: 14px;
     color: white;
-    line-height: 26px;
 }
 
-.col .account a:nth-child(2) img {
+.col .bottom a:nth-child(3) img {
     background: #a7a7a7;
     object-position: top;
     object-fit: cover;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    margin-right: 10px;
 }
 
 
