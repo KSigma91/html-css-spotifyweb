@@ -16,91 +16,92 @@
     <header>
         <!-- barra principale Spotify -->
         <div class="col">
-
-            <!-- logo -->
-            <img src="img/logo.svg" alt="spotify_logo">
-            <!-- icone principali -->
-            <ul>
-                <li>
-                    <a style="color: white;" href="#">
-                        <img style="filter: invert(0.1);" src="img/home.svg" alt="home_img">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/search.svg" alt="search_img">
-                        Cerca
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/libreria.svg" alt="library_img">
-                        La tua libreria
-                    </a>
-                </li>         
-            </ul>
-
-            <!-- sezione playlist -->
-            <div class="playlist">
-                <h3>PLAYLIST</h3>
-
-                <!-- tasto crea playlist -->
-                <a id="add" href="#">
-                    <i class="fas fa-plus-square"></i>
-                    Crea Playlist
-                </a>
-                <!-- slot liberi -->
+            <div class="top">
+                <!-- logo -->
+                <img src="img/logo.svg" alt="spotify_logo">
+                <!-- icone principali -->
                 <ul>
                     <li>
-                        <a href="#">
-                            Nome Playlist
+                        <a style="color: white;" href="#">
+                            <img style="filter: invert(0.1);" src="img/home.svg" alt="home_img">
+                            Home
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            Nome Playlist
+                            <img src="img/search.svg" alt="search_img">
+                            Cerca
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            Nome Playlist
+                            <img src="img/libreria.svg" alt="library_img">
+                            La tua libreria
                         </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
+                    </li>         
                 </ul>
 
-                <!-- download e log in utente -->
-                <div class="account">
-                    <a href="#">
-                        <img src="img/download.svg" alt="download_logo">
-                        Installa app
-                    </a>
+                <!-- sezione playlist -->
+                <div class="playlist">
+                    <h3>PLAYLIST</h3>
 
-                    <a href="#">
-                        <img src="img/profile.svg" alt="profile_logo">
-                        John Doe
+                    <!-- tasto crea playlist -->
+                    <a id="add" href="#">
+                        <i class="fas fa-plus-square"></i>
+                        Crea Playlist
                     </a>
-                </div>
+                    <!-- slot liberi -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Nome Playlist
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Nome Playlist
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Nome Playlist
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Nome Playlist
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Nome Playlist
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Nome Playlist
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Nome Playlist
+                            </a>
+                        </li>
+                    </ul>
+                </div>           
+            </div>
+
+            <!-- download e log in utente -->
+            <div class="bottom">
+                <a href="#">
+                    <img src="img/download.svg" alt="download_logo">
+                    Installa app
+                </a>
+                <span></span>
+                <a href="#">
+                    <img src="img/profile.svg" alt="profile_logo">
+                    John Doe
+                </a>
             </div>
         </div>
     </header>
@@ -161,60 +162,73 @@
             <div class="track">
                 <!-- thumbnail -->
                 <div class="box">
-                    <a href="#">
-                        <img src="img/metal_lifting.jpg" alt="heavy_metal_img">
-                        <i class="far fa-play-circle"></i>
-                    </a>
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/metal_lifting.jpg" alt="heavy_metal_img">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    
                     <h3>Heavy Metal</h3>
                     <span>Subtitle</span>
                 </div>
 
                 <!-- thumbnail -->
                 <div class="box">
-                    <a href="#">
-                        <img src="img/stranger.jpeg" alt="stranger_things_img">
-                        <i class="far fa-play-circle"></i>
-                    </a>
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/stranger.jpeg" alt="stranger_things_img">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
                     <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
                     <span>Kyle Dixon & Michael Stein</span>
                 </div>
 
                 <!-- thumbnail -->
                 <div class="box">
-                    <a href="#">
-                        <img src="img/aquietplace.jpeg" alt="a_quiet_place_img">
-                        <i class="far fa-play-circle"></i>
-                    </a>
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/aquietplace.jpeg" alt="a_quiet_place_img">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
                     <h3>A quiet place</h3>
                     <span>Subtitle</span>
                 </div>
 
                 <!-- thumbnail -->
                 <div class="box">
-                    <a href="#">
-                        <img src="img/split.jpeg" alt="split_img">
-                        <i class="far fa-play-circle"></i>
-                    </a>
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/split.jpeg" alt="split_img">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
                     <h3>Split</h3>
                     <span>Subtitle</span>
                 </div>
 
                 <!-- thumbnail -->
                 <div class="box">
-                    <a href="#">
-                        <img src="img/cure.jpeg" alt="a_cure_for_wellness_img">
-                        <i class="far fa-play-circle"></i>
-                    </a>
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/cure.jpeg" alt="a_cure_for_wellness_img">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
                     <h3>A cure for wellness</h3>
                     <span>Subtitle</span>
                 </div>
 
                 <!-- thumbnail -->
                 <div class="box">
-                    <a href="#">
-                        <img src="img/sinister.jpeg" alt="sinister_img">
-                        <i class="far fa-play-circle"></i>
-                    </a>
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/sinister.jpeg" alt="sinister_img">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
                     <h3>Sinister</h3>
                     <span>Subtitle</span>
                 </div>               
@@ -232,19 +246,23 @@
             <div class="track">
                 <!-- thumbnail -->
                 <div class="box">
-                    <a href="#">
-                        <img src="img/radar.jpeg" alt="radar_img">
-                        <i class="far fa-play-circle"></i>
-                    </a>
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/radar.jpeg" alt="radar_img">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
                     <h3>Release Radar</h3>
                 </div>
 
                 <!-- thumbnail -->
                 <div class="box">
-                    <a href="#">
-                        <img src="img/mixdaily.jpeg" alt="daily_mix_img">
-                        <i class="far fa-play-circle"></i>
-                    </a>
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/mixdaily.jpeg" alt="daily_mix_img">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>                   
                     <h3>Daily Mix 1</h3>                   
                 </div>
             </div>
@@ -260,19 +278,23 @@
             <div class="track">
                 <!-- thumbnail -->
                 <div class="box">
-                    <a href="#">
-                        <img src="img/youg.jpeg" alt="youg_img">
-                        <i class="far fa-play-circle"></i>
-                    </a>
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/youg.jpeg" alt="youg_img">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
                     <h3>Lana del Rey</h3>
                 </div>
 
                 <!-- thumbnail -->
                 <div class="box">
-                    <a href="#">
-                        <img src="img/einaudi.jpeg" alt="einaudi_img">
-                        <i class="far fa-play-circle"></i>
-                    </a>
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/einaudi.jpeg" alt="einaudi_img">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>                   
                     <h3>Ludovico Einaudi</h3>                   
                 </div>
             </div>

@@ -47,7 +47,7 @@ header .col {
 }
 
 header .col .top {
-    padding: 20px;
+    margin: 20px;
 }
 
 /* logo */
@@ -57,17 +57,13 @@ header .col .top {
 }
 
 /* icone */
-.col .top ul li {
-    display: flex;
-    flex-direction: row;
-}
-
 .col .top ul li a {
     display: flex;
     height: 40px;
     line-height: 50px;
     color: #717171;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 700;
  }
 
 .col .top ul li a img {
@@ -79,7 +75,7 @@ header .col .top {
 
 /* playlist */
 .top .playlist h3 {
-    margin-top: 10px;
+    margin-top: 25px;
     color: white;
     font-size: 14px;
 }
@@ -103,7 +99,6 @@ header .col .top {
 
 /* slot */
 .top .playlist ul {
-    margin-top: 10px;
     /* overflow-y: auto; */
 }
 
@@ -155,14 +150,18 @@ header .col .top {
 
 
 /* hover header */
-.col ul li a:hover {
+.top ul li a:hover {
     /* debug */
     color: red;
 }
 
-.col .playlist #add:hover {
+.top .playlist #add:hover {
     /* debug */
     color: red;
+}
+
+.top .playlist ul li a:hover {
+    text-emphasis-color: white;
 }
 
 .col .account a:hover {
@@ -170,18 +169,12 @@ header .col .top {
     color: red;
 }
 
-.col .playlist ul li a:hover {
-    text-emphasis-color: white;
-}
-
 
 
 /* main */
 main {
-    /* debug */
     float: left;
     overflow-y: auto;
-    z-index: 100;
     background: #141921;
     width: calc(100% - 240px);
     height: calc(100vh - 90px);
@@ -197,6 +190,7 @@ main::after {
 /* barra */
 main .top-bar {
     position: fixed;
+    z-index: 30;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -221,17 +215,21 @@ main .top-bar {
 /* elementi */
 main .content {
     padding-top: 90px;
-    /* debug */
     width: 100%;
     height: 100vh;
 }
 
 .content nav ul {
-    display: flex;
-    justify-content: space-evenly;
     padding: 16px;
     margin: 0 auto;
-    width: 43%; 
+    width: 90%; 
+    text-align: center;
+}
+
+.content nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 25px;
 }
 
 .content nav ul li a {
@@ -269,18 +267,17 @@ main .content {
 .content .track {
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     margin: 15px 20px;
     height: 38%;
 }
 
-/* .content .track:nth-last-of-type(2) {
+.content .track:nth-last-of-type(2) {
     height: 29%;
-} */
+}
 
 /* thumbnail */
 .track .box {
-    position: relative;
     flex-direction: column;
     width: 11%;
     text-align: center;
@@ -290,7 +287,11 @@ main .content {
     margin-right: 15px;
 }
 
-.track .box a i {
+.track .box .thumbnail {
+    position: relative;
+}
+
+.track .box .thumbnail a > i {
     font-size: 60px;
     display: none;
 }
@@ -302,7 +303,7 @@ main .content {
     font-weight: 800;
 }
 
-.track .box > span {   
+.track .box > span {     
     color: #717171;
     font-size: 12px;
 }
@@ -325,13 +326,12 @@ main .content {
 .track .box a img:hover {
     filter: opacity(60%);
 }
-/* momentaneo */
-.track .box a:hover i {
-    /* debug */
+
+.box .thumbnail a:hover i {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -50%);
     display: block;
     color: white;
 }
@@ -428,7 +428,7 @@ footer #player {
 }
 
 #player #progress-bar a {
-    /* display: flex; */
+    display: flex;
     background: #5A5A5A;
     width: 64%;
     height: 4px;
@@ -462,8 +462,8 @@ footer #tools {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;  
-    margin-right: 10px;
-    width: 220px;
+    padding: 0 10px;
+    /* width: 220px; */
 }
 
 #tools ul {
@@ -539,4 +539,85 @@ footer #tools {
 
 #tools .buffer:hover span {
     display: block;
+}
+
+
+
+/* responsive */
+@media screen and (max-width: 1067px) {
+
+    main .content {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 auto;
+    }
+
+    main .content .track {
+        /* debug */
+        /* width: 200%; */
+        height: 70vh;
+    }
+
+    .content .track:nth-last-of-type(2) {
+        /* width: 90%; */
+        height: 25vh;
+    }
+
+    .track .box {
+        min-width: 150px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+
+    header {
+        width: 63px;
+    }
+
+    .top img {
+        display: none;
+    }
+
+    .top ul li, .top .playlist, .col .bottom {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        justify-content: space-evenly;
+        width: calc(100% - 63px);
+    }
+
+    main .top-bar {
+        width: calc(100% - 63px);
+    }
+
+    main .content .track {
+        display: flex;
+        flex-wrap: wrap;
+        /* debug */
+        height: 115vh;
+    }
+
+    .content .track:nth-last-of-type(2) {
+        height: 30vh;
+    }
+
+    .content .track:nth-last-of-type(1) {
+        height: 35vh;
+    }
+
+    .track .box {
+        width: 35%;
+    }
+
+    .track .box a:hover i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        color: white;
+    }
 }
