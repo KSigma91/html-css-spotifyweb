@@ -24,12 +24,13 @@ a {
 header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background: #000;
     float: left;
     width: 240px;
     height: calc(100vh - 90px);
     font-weight: 600;
+    max-width: 100%;
 }
 
 header::after {
@@ -38,6 +39,51 @@ header::after {
     clear: both;
 }
 
+/* icone responsive */
+header #col-resp {
+    display: none;
+    flex-direction: column;
+    height: calc(100vh - 90px);
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+#col-resp #top-resp {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 170px);
+}
+
+#col-resp ul li > img {
+    width: 30px;
+}
+
+#col-resp ul li:first-child img {
+    margin-bottom: 12px;
+}
+
+#col-resp #bottom-resp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#col-resp #bottom-resp a > img {
+    width: 20px;
+}
+
+#col-resp #bottom-resp a:last-child img {
+    background: #717171;
+    border-radius: 50%;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+/* barra Spotify */
 header .col {
     display: flex;
     flex-direction: column;
@@ -72,6 +118,7 @@ header .col .top {
     margin-right: 5px;
     filter: invert(0.3);
 }
+
 
 /* playlist */
 .top .playlist h3 {
@@ -140,7 +187,7 @@ header .col .top {
 }
 
 .col .bottom a:nth-child(3) img {
-    background: #a7a7a7;
+    background: #717171;
     object-position: top;
     object-fit: cover;
     width: 25px;
@@ -578,11 +625,17 @@ footer #tools {
         width: 63px;
     }
 
-    .top img {
+    header #col-resp {
+        display: block;
+    }
+
+    
+
+    .col .top > img {
         display: none;
     }
 
-    .top ul li, .top .playlist, .col .bottom {
+    .col .top ul li, .top .playlist, .col .bottom {
         display: none;
     }
 
