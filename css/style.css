@@ -152,7 +152,7 @@ header .col .top {
 /* hover header */
 .top ul li a:hover {
     /* debug */
-    color: red;
+    color: white;
 }
 
 .top .playlist #add:hover {
@@ -161,12 +161,16 @@ header .col .top {
 }
 
 .top .playlist ul li a:hover {
-    text-emphasis-color: white;
+    color: white;
 }
 
 .col .account a:hover {
     /* debug */
     color: red;
+}
+
+.col .bottom:nth-child(2) > :hover {
+    color: white;
 }
 
 
@@ -229,7 +233,6 @@ main .content {
 .content nav ul li {
     display: inline-block;
     margin-right: 20px;
-    margin-bottom: 25px;
 }
 
 .content nav ul li a {
@@ -619,5 +622,12 @@ footer #tools {
         transform: translate(-50%, -50%);
         display: block;
         color: white;
+    }
+}
+
+@media screen and (max-height: 770px) {
+
+    .playlist ul {
+        overflow-y: auto;
     }
 }
