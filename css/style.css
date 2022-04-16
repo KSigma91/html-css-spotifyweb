@@ -166,6 +166,10 @@ header .col .top {
     color: #717171;
 }
 
+.col .bottom a:first-child img {
+    filter: invert(0.3);
+}
+
 .col .bottom > span {
     border-bottom: 1px solid grey;
     margin: 8px 0;
@@ -197,27 +201,22 @@ header .col .top {
 
 
 /* hover header */
-.top ul li a:hover {
-    /* debug */
+.top ul li a:hover, .top ul li a:hover img {
     color: white;
+    filter: grayscale(1);
 }
 
-.top .playlist #add:hover {
-    /* debug */
-    color: red;
+.top .playlist #add:hover, .top .playlist #add:hover .fas {
+    color: white;
 }
 
 .top .playlist ul li a:hover {
     color: white;
 }
 
-.col .account a:hover {
-    /* debug */
-    color: red;
-}
-
-.col .bottom:nth-child(2) > :hover {
+.col .bottom a:nth-last-of-type(2):hover, .col .bottom a:nth-last-of-type(2):hover img {
     color: white;
+    filter: grayscale(1);
 }
 
 
@@ -604,12 +603,10 @@ footer #tools {
 
     main .content .track {
         /* debug */
-        /* width: 200%; */
         height: 70vh;
     }
 
     .content .track:nth-last-of-type(2) {
-        /* width: 90%; */
         height: 25vh;
     }
 
@@ -628,8 +625,6 @@ footer #tools {
     header #col-resp {
         display: block;
     }
-
-    
 
     .col .top > img {
         display: none;
@@ -650,8 +645,6 @@ footer #tools {
     }
 
     main .content .track {
-        display: flex;
-        flex-wrap: wrap;
         /* debug */
         height: 115vh;
     }
