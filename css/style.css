@@ -54,6 +54,11 @@ header #col-resp {
     height: calc(100vh - 170px);
 }
 
+#col-resp #top-resp > ul {
+    height: 150px;
+    padding-bottom: 20px;
+}
+
 #col-resp ul li > img {
     width: 30px;
 }
@@ -146,7 +151,7 @@ header .col .top {
 
 /* slot */
 .top .playlist ul {
-    /* overflow-y: auto; */
+    
 }
 
 /* account e download */
@@ -603,20 +608,32 @@ footer #tools {
 
     main .content .track {
         /* debug */
-        height: 70vh;
+        /* height: 70vh; */
+        margin-bottom: 270px;
     }
 
-    .content .track:nth-last-of-type(2) {
-        height: 25vh;
+    .content .track:nth-last-of-type(2) {   
+        /* height: 25vh; */
+        margin-bottom: 0;
     }
 
     .track .box {
         min-width: 150px;
-        margin-bottom: 50px;
     }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 795px) {
+
+    main .content .track {
+        height: 60vh;
+    }
+
+    .content .track:nth-last-of-type(1) {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 734px) {
 
     header {
         width: 63px;
@@ -646,7 +663,8 @@ footer #tools {
 
     main .content .track {
         /* debug */
-        height: 115vh;
+        height: 100vh;
+        margin-bottom: 0;
     }
 
     .content .track:nth-last-of-type(2) {
