@@ -59,8 +59,9 @@ header #col-resp {
     padding-bottom: 20px;
 }
 
-#col-resp ul li > img {
+#col-resp #top-resp ul li a > img {
     width: 30px;
+    filter: invert(0.3);
 }
 
 #col-resp ul li:first-child img {
@@ -75,6 +76,10 @@ header #col-resp {
 
 #col-resp #bottom-resp a > img {
     width: 20px;
+}
+
+#col-resp #bottom-resp a:first-child {
+    filter: invert(0.3);
 }
 
 #col-resp #bottom-resp a:last-child img {
@@ -110,7 +115,7 @@ header .col .top {
 /* icone */
 .col .top ul li a {
     display: flex;
-    height: 40px;
+    height: 35px;
     line-height: 50px;
     color: #717171;
     font-size: 13px;
@@ -148,18 +153,13 @@ header .col .top {
     margin-right: 10px;
 }
 
-
-/* slot */
-.top .playlist ul {
-    
-}
-
 /* account e download */
 .col .bottom {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     padding: 7px 20px;
+    background: #000;
 }
 
 .col .bottom a {
@@ -206,6 +206,14 @@ header .col .top {
 
 
 /* hover header */
+#col-resp #top-resp ul li a:hover img {
+    filter: grayscale(1);
+}
+
+#col-resp #bottom-resp a:first-child:hover {
+    filter: grayscale(1);
+}
+
 .top ul li a:hover, .top ul li a:hover img {
     color: white;
     filter: grayscale(1);
@@ -323,11 +331,13 @@ main .content {
     justify-content: flex-start;
     flex-flow: row wrap;
     margin: 15px 20px;
-    height: 38%;
+    /* height: 38%; */
+    height: 330px;
 }
 
 .content .track:nth-last-of-type(2) {
-    height: 29%;
+    /* height: 29%; */
+    height: 250px;
 }
 
 /* thumbnail */
@@ -625,7 +635,9 @@ footer #tools {
 @media screen and (max-width: 795px) {
 
     main .content .track {
-        height: 60vh;
+        /* height: 60vh; */
+        /* height: 550px; */
+        margin-bottom: 500px;
     }
 
     .content .track:nth-last-of-type(1) {
@@ -691,7 +703,18 @@ footer #tools {
 
 @media screen and (max-height: 770px) {
 
-    .playlist ul {
+    .col .bottom {
+        position: absolute;
+        bottom: 90px;
+        left: 0;
+    }
+
+    footer {
+        position: relative;
+        z-index: 600;
+    }
+
+    .col .playlist ul {
         overflow-y: auto;
     }
 }
