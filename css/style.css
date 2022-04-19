@@ -72,6 +72,8 @@ header #col-resp {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #000;
+    height: 75px;
 }
 
 #col-resp #bottom-resp a > img {
@@ -331,12 +333,10 @@ main .content {
     justify-content: flex-start;
     flex-flow: row wrap;
     margin: 15px 20px;
-    /* height: 38%; */
     height: 330px;
 }
 
 .content .track:nth-last-of-type(2) {
-    /* height: 29%; */
     height: 250px;
 }
 
@@ -514,10 +514,13 @@ footer #player {
     display: none;
     align-self: center;
     background: white;
-    width: 13px;
-    height: 13px;
+    /* width: 13px;
+    height: 13px; */
+    padding: 7px;
+    z-index: 300;
     border-radius: 50%;
-    margin-left: 73px;
+    /* margin-left: 73px; */
+    margin-left: 83%;
 }
 
 
@@ -564,8 +567,10 @@ footer #tools {
     display: none;
     align-self: center;
     background: white;
-    width: 13px;
-    height: 13px;
+    /* width: 13px;
+    height: 13px; */
+    padding: 7px;
+    z-index: 300;
     border-radius: 50%;
     margin-left: 12px;
 }
@@ -675,16 +680,18 @@ footer #tools {
 
     main .content .track {
         /* debug */
-        height: 100vh;
-        margin-bottom: 0;
+        /* height: 100vh; */
+        margin-bottom: 600px;
     }
 
     .content .track:nth-last-of-type(2) {
-        height: 30vh;
+        /* height: 30vh; */
+        height: 300px;
     }
 
     .content .track:nth-last-of-type(1) {
-        height: 35vh;
+        /* height: 35vh; */
+        height: 300px;
     }
 
     .track .box {
@@ -702,6 +709,11 @@ footer #tools {
 }
 
 @media screen and (max-height: 770px) {
+
+    #col-resp #bottom-resp {
+        position: relative;
+        z-index: 30;
+    }
 
     .col .bottom {
         position: absolute;
